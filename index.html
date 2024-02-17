@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+        <style>
+           .anton-regular {
+            font-family: "Anton", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+          }
+          body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+          }
+          .hidden{
+            display: none;
+          }
+        </style>
+          
+</head>
+<body class="bg-[#1E1E1E]">
+    <main class="bg-[url(images/background.png)] min-h-screen bg-no-repeat bg-center">
+        <section id="hello" class=" flex flex-col min-h-screen justify-center items-center">
+          <div class="flex flex-col justify-center items-center">
+          <h1 class="anton-regular text-[170px] text-white">ALPHABET CLASH</h1>
+          <p class="text-white anton-regular text-2xl">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
+          <button class="btn mt-12" id="go" onclick="gotoPlay()">Play Now</button>
+          </div>
+        </section>
+        <section id="play" class="hidden">
+            <div class="flex flex-col justify-center gap-20 pt-20">
+            <div class="flex justify-center">
+                <div class="artboard artboard-horizontal phone-6 border-[20px] rounded-2xl bg-[#FFFFFFB8] border-[#010313CC]">
+                    <div class="flex justify-center"><p class="bg-[#010313CC] text-white text-center px-7 pb-4 rounded-b-[12px] text-[16px]">Dont watch Keyboard while playing</p>
+                    </div>
+                    <div class="flex justify-center items-center"><h1 class="text-[#010313] font-bold text-[140px] capitalize" id="playing">H</h1></div>
+                </div>
+                </div>
+
+                <div>
+                    <div class="flex justify-center gap-1 my-1 w-full capitalize">
+                        <kbd id="q" class="kbd">q</kbd>
+                        <kbd id="w" class="kbd">w</kbd>
+                        <kbd id="e" class="kbd">e</kbd>
+                        <kbd id="r" class="kbd">r</kbd>
+                        <kbd id="t" class="kbd">t</kbd>
+                        <kbd id="y" class="kbd">y</kbd>
+                        <kbd id="u" class="kbd">u</kbd>
+                        <kbd id="i" class="kbd">i</kbd>
+                        <kbd id="o" class="kbd">o</kbd>
+                        <kbd id="p" class="kbd">p</kbd>
+                      </div> 
+                      <div class="flex justify-center gap-1 my-1 w-full capitalize">
+                        <kbd id="a" class="kbd">a</kbd>
+                        <kbd id="s" class="kbd">s</kbd>
+                        <kbd id="d" class="kbd">d</kbd>
+                        <kbd id="f" class="kbd">f</kbd>
+                        <kbd id="g" class="kbd">g</kbd>
+                        <kbd id="h" class="kbd">h</kbd>
+                        <kbd id="j" class="kbd">j</kbd>
+                        <kbd id="k" class="kbd">k</kbd>
+                        <kbd id="l" class="kbd">l</kbd>
+                      </div> 
+                      <div class="flex justify-center gap-1 my-1 w-full capitalize">
+                        <kbd id="z" class="kbd">z</kbd>
+                        <kbd id="x" class="kbd">x</kbd>
+                        <kbd id="c" class="kbd">c</kbd>
+                        <kbd id="v" class="kbd">v</kbd>
+                        <kbd id="b" class="kbd">b</kbd>
+                        <kbd id="n" class="kbd">n</kbd>
+                        <kbd id="m" class="kbd">m</kbd>
+                        <kbd id="/" class="kbd">/</kbd>
+                      </div>
+                </div>
+                <div class="btn-area flex justify-center gap-[840px]">
+                    <button class="btn px-[35px] bg-purple-400 text-white bge" ><span id = "life">5</span>life</button>
+                    <button class="btn px-[35px] bg-purple-950 text-white" ><span id="yourscore">0</span>score</button>
+                </div>
+            </div>
+        </section>
+        <section class="flex justify-center items-center flex-col min-h-screen hidden" id = "final-area">
+            <div class="bg-[#FFFFFF12] flex flex-col justify-center items-center gap-4 px-[48px] py-11">
+              <h2 class="anton-regular text-white text-6xl">Score :<span id="areafinal">0</span></h2>
+              <button class="btn text-black font-bold w-[175px]" onclick="gotoPlay()">Play Again</button>
+              <p class="text-white">Practise will make you perfect</p>
+            </div>
+        </section>
+    </main>
+    <script src="js/all-js.js"></script>
+    <script src="js/utility.js"></script>
+</body>
+</html>
